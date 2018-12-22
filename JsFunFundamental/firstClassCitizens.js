@@ -1,24 +1,24 @@
 const fun = () => {};
-console.log(typeof fun); //function
+//console.log(typeof fun); //function
 
 //pass function like data
 const tellType = arg => {
   console.log(typeof arg);
 };
 
-tellType(fun); //function
+// tellType(fun); //function
 
-tellType(1); //number
+// tellType(1); //number
 
-tellType("string"); //string
+// tellType("string"); //string
 
-tellType(true); //boolean
+// tellType(true); //boolean
 
-tellType({}); //object
+// tellType({}); //object
 
-tellType(null); //object
+// tellType(null); //object
 
-tellType(undefined); //undefined
+// tellType(undefined); //undefined
 
 //call if arg is function
 const tellType2 = arg => {
@@ -30,4 +30,10 @@ const tellType2 = arg => {
   }
 };
 
-tellType2(tellType);
+// tellType2(tellType);
+
+//return a function  !!Run on chrome to see result
+
+//Fn => String     function signature
+const crazy = () => String; //function String()..
+crazy()("N"); //"N"
