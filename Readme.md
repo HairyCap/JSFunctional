@@ -89,3 +89,7 @@ let function2 = global => {
 ```bash
 cat jsBook | grep -i "composing"  | wc
 ```
+
+## 高阶函数
+
+- 接收函数为参数，返回函数的函数
