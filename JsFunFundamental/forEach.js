@@ -5,4 +5,13 @@ const forEach = (fun, array) => {
     fun(array[i]);
   }
 };
+
+const forEachObj = (fun, obj) => {
+  for (var key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      fun(key, obj[key]);
+    }
+  }
+};
 module.exports = forEach;
+module.exports = forEachObj;
