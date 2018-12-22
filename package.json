@@ -1,0 +1,12 @@
+{
+  "name": "JavaScriptES6Functional",
+  "version": "1.0.0",
+  "description": "_函数的第一原则是要小。函数的第二原则是要更小。_",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
