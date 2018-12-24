@@ -2,8 +2,9 @@ const forEach = require("./forEach");
 const forEachObj = require("./forEach");
 const unless = require("./unless");
 const times = require("./times");
+const every = require("./every");
 
-const arr = [1, 2, 3, 4];
+const arr = [1, 2, 3, NaN];
 
 forEach(num => {
   console.log(num * 3);
@@ -19,4 +20,6 @@ forEach(num => {
   unless(() => console.log(num + " is even"), num % 2);
 }, arr);
 
-times(i => console.log(i + 1), 100);
+times(i => unless(() => console.log(i + " is even"), i % 2), 100);
+
+console.log(every(i => !i, arr));
