@@ -3,14 +3,20 @@ const forEachObj = require("./forEach");
 const unless = require("./unless");
 const times = require("./times");
 const every = require("./every");
+const some = require("./some");
+const sortBy = require("./sortBy");
 
-const arr = [1, 2, 3, 4];
+const arr = [1, 2, 3, NaN];
 
 forEach(num => {
   console.log(num * 3);
 }, arr);
 
-const obj = { a: 1, b: 2 };
+const obj = [
+  { a: 4, b: 1, c: 2, d: 3 },
+  { a: 1, b: 3, c: 4, d: 3 },
+  { a: 2, b: 2, c: 1, d: 3 }
+];
 
 forEachObj((key, value) => {
   console.log(`${key}:${value}`);
@@ -22,4 +28,11 @@ forEach(num => {
 
 times(i => unless(() => console.log(i + " is even"), i % 2), 100);
 
-console.log(every(i => !!i, arr));
+console.log(every(i => !!i, arr)); //false
+
+console.log(some(i => !!i, arr)); //true
+
+console.log(obj.sort(sortBy("a")));
+//[ { a: 1, b: 3, c: 4, d: 3 },
+//{ a: 2, b: 2, c: 1, d: 3 },
+//{ a: 4, b: 1, c: 2, d: 3 } ]
