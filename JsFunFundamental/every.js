@@ -1,7 +1,8 @@
 const every = (fun, arr) => {
   let result = true;
-  for (let i = 0; i < arr.length; i++) {
-    result = result && fun(arr[i]);
+  for (let i of arr) {
+    //for ..of iterate array
+    result = result && fun(i);
   }
   return result;
 };
