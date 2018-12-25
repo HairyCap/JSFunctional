@@ -6,6 +6,7 @@ const every = require("./every");
 const some = require("./some");
 const sortBy = require("./sortBy");
 const tap = require("./tap");
+const unary = require("./unary");
 
 const arr = [1, 2, 3, NaN];
 
@@ -42,3 +43,7 @@ console.log(arrObj.sort(sortBy("a")));
 
 const one = tap(console.log);
 one(1);
+
+const strArrInt = ["1", "3", "5", "9"];
+const unaryIntParse = unary(parseInt);
+console.log(strArrInt.map(unaryIntParse));
