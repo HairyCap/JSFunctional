@@ -1,12 +1,13 @@
-const forEach = require("./forEach");
-const forEachObj = require("./forEach");
-const unless = require("./unless");
-const times = require("./times");
-const every = require("./every");
-const some = require("./some");
-const sortBy = require("./sortBy");
-const tap = require("./tap");
-const unary = require("./unary");
+const forEach = require("./JsFunFundamental/forEach");
+const forEachObj = require("./JsFunFundamental/forEach");
+const unless = require("./JsFunFundamental/unless");
+const times = require("./JsFunFundamental/times");
+const every = require("./JsFunFundamental/every");
+const some = require("./JsFunFundamental/some");
+const sortBy = require("./JsFunFundamental/sortBy");
+const tap = require("./JsFunFundamental/tap");
+const unary = require("./JsFunFundamental/unary");
+const once = require("./JsFunFundamental/once");
 
 const arr = [1, 2, 3, NaN];
 
@@ -47,3 +48,9 @@ one(1);
 const strArrInt = ["1", "3", "5", "9"];
 const unaryIntParse = unary(parseInt);
 console.log(strArrInt.map(unaryIntParse));
+
+const printOnce = once(console.log);
+printOnce("kjasdfkjhsfkj");
+printOnce("afsdfasdf");
+printOnce(2);
+printOnce(2);
