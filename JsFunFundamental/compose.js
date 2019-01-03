@@ -10,6 +10,7 @@ const compose = (...args) => {
   };
 };
 
+module.exports = compose;
 //test
 // trim :: string -> string
 // const trim = str => str.replace(/^\s*|\s*$/g, "");
