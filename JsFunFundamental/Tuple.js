@@ -1,8 +1,10 @@
 const checkType = require("./checkType");
 
-const Tuple = function() {
-  const tupleType = Array.from(arguments); //Same as Array.prototype.slice.call(arguments, 0);
+const Tuple = (...args) => {
+  const tupleType = args;
+  //const tupleType = Array.from(arguments); //Same as Array.prototype.slice.call(arguments, 0);
   const _T = function() {
+    //can't use arrow functions on constructor function!!
     const tupleValues = [...arguments]; //Same as Array.from(arguments)
     //--
     if (tupleValues.some(val => val === null || val === undefined)) {
