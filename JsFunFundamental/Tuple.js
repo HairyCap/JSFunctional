@@ -1,5 +1,6 @@
 const checkType = require("./checkType");
 
+//Tuple :: arguments of dataType -> that types of Tuple constructor function
 const Tuple = (...args) => {
   const tupleType = args;
   //const tupleType = Array.from(arguments); //Same as Array.prototype.slice.call(arguments, 0);
@@ -17,7 +18,7 @@ const Tuple = (...args) => {
     //--Array.prototype.map((val,index,array)=>{},this)
     //Arrow function's this key word is get automaticly from context
     //in this case,map function's this argument can be omited
-    //like line 29
+    //like _T.prototype.values function
     tupleValues.map((val, index) => {
       this["_" + (index + 1)] = checkType(tupleType[index])(val);
     }, this);
